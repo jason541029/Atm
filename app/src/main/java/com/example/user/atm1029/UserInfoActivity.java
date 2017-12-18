@@ -14,7 +14,7 @@ public class UserInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
         String name = getSharedPreferences("atm",MODE_PRIVATE)
-                .getString("NickName", " jason");
+                .getString("NickName", " 11");
         String phone = getSharedPreferences("atm",MODE_PRIVATE)
                 .getString("Phone", "0976219968");
         edName =findViewById(R.id.ed_nickname);
