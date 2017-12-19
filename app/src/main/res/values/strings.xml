@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Atm1029</string>
     <string name="action_settings">Settings</string>
+    <array name="ages">
+        <item>16-25</item>
+    </array>
+
 </resources>
