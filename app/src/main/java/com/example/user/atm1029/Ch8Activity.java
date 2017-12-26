@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class Ch8Activity extends AppCompatActivity {
-    public static final String TAG = Ch8Activity
+    public static final String TAG = Ch8Activity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

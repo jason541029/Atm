@@ -3,6 +3,10 @@
     <string name="action_settings">Settings</string>
     <array name="ages">
         <item>16-25</item>
+        <item>26-35</item>
+        <item>36-45</item>
+        <item>46-55</item>
+
     </array>
 
 </resources>
