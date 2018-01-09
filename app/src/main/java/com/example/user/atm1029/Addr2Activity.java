@@ -16,14 +16,28 @@ private Spinner spArea;
         setContentView(R.layout.activity_addr2);
         spCity = (Spinner)findViewById(R.id.sp_city);
         spArea = (Spinner)findViewById(R.id.sp_area);
-        ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,
+        final ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,
         new String[]{"AA","BB","CC"});
         spCity.setAdapter(adapter);
         spCity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ArrayAdapter adapter1 = new ArrayAdapter(this,android.R.layout.simple_list_item_1,
-                        );
+                String[]data = null;
+                switch (position){
+                    case 0 :
+                        data = new String[]{"1","2","3"};
+                        break;
+                    case 1 :
+                        data = new String[]{"4","5","6"};
+                        break;
+                    case 2 :
+                        data = new String[]{"7","8","9"};
+                        break;
+                }
+                ArrayAdapter adapter1 = new ArrayAdapter(
+                        Addr2Activity.this,android.R.layout.simple_list_item_1,
+                        data);
+                spArea.setAdapter(adapter);
             }
 
             @Override

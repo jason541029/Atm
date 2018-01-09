@@ -11,12 +11,13 @@ import android.widget.Spinner;
 
 public class Ch8Activity extends AppCompatActivity {
     public static final String TAG = Ch8Activity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch8);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        final String[] data = {"AAA","BBB","CCC"};
+        final String[] data = {"AAA", "BBB", "CCC"};
         ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, data);
         spinner.setAdapter(adapter);
@@ -25,9 +26,12 @@ public class Ch8Activity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d(TAG, "onItemSelectect:" +data[position]);
+                Log.d(TAG, "onItemSelectect:" + data[position]);
+            }
+
+
+            private void onNothingSelected(AdapterView<?> adapterVeiw) {
             }
         });
     }
-
 }

@@ -9,10 +9,16 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        String userid = getSharedPreferences("ATM",MODE_PRIVATE)
+                .getString("USERID"," ");
+
     }
     public void login(View view){
         EditText edUserid = findViewById(R.id.userid);

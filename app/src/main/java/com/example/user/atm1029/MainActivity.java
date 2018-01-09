@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +40,10 @@ private  final  static  int REQUEST_USERINFO = 105;
                 //.setAction("Action", null).show();
             }
         });
+        ListView listView = (ListView) findViewById(R.id.list);
+        final String[] data = {"AAA", "BBB", "CCC"};
+        ArrayAdapter adapter = new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, data);
     }
 
 

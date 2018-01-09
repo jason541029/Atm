@@ -27,19 +27,15 @@ public class UserInfoActivity extends AppCompatActivity {
      //       data.add(i + "");
        // }
         String[] data = getResources().getStringArray(R.array.ages);
-        ArrayAdapter adapter = new ArrayAdapter(this,R.array.ages, android.R.layout.simple_list_item_1);
+        ArrayAdapter adapter = new ArrayAdapter(this,R.array.ages,android.R.layout.simple_list_item_1);
         ages.setAdapter(adapter);
 
 Intent addr2 = new Intent(this,Addr2Activity.class);
 startActivity(addr2);
-
-
-
-
         String name = getSharedPreferences("atm",MODE_PRIVATE)
-                .getString("NickName", " 11");
+                .getString("NickName", " ");
         String phone = getSharedPreferences("atm",MODE_PRIVATE)
-                .getString("Phone", "0976219968");
+                .getString("Phone", " ");
         edName = findViewById(R.id.ed_name);
         edPhoneNumber = findViewById(R.id.ed_phonenumber);
         edName.setText(name);
